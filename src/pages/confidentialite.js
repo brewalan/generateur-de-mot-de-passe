@@ -44,11 +44,11 @@ const PrivacyPage = () => {
   )
 }
 
-export const Head = () => {
+export const Head = () => (
     <React.Fragment>
         <title>Déclaration de Confidentialité</title>
         <meta name="description" content="Utilisation des cookies sur ce site. Déclaration de confidentialité." />
     </React.Fragment>
-}
+)
 
 export default PrivacyPage
