@@ -3,67 +3,74 @@
 /* Generate some verbs when starting to key down */
 class GenMotDePasse {
 
-    prop = [];
+    paramChiffre = true;
+    paramMinuscule = true;
+    paramMajuscule = true;
+    paramSpeciaux = true;
+    paramExclusion = false;
+    paramNbChar = 12;
+    paramNbMdp = 1;    
 
-    traiteVb(texte){
-        texte=texte.toLowerCase();
-        texte=texte.replace(/[!?]/g,"");
-        texte=texte.replace(/^(se |s'|s'en |ne |ne pas |no )/g,"");
-        texte=this.vbSansAccent(texte);
-        return texte;
-    }		
-    vbSansAccent(texte){
-        texte=texte.replace(/[éèêë]/g,"e");
-        texte=texte.replace(/[áàâä]/g,"a");
-        texte=texte.replace(/[íìîï]/g,"i");
-        texte=texte.replace(/[óòôö]/g,"o");
-        texte=texte.replace(/[úùûü]/g,"u");
-        texte=texte.replace(/[ñ]/g,"n");
-        return texte;
-    }		
-    
 
-    checkCache(cacheVerbe,verbe) {
-        const nb = cacheVerbe.length;
-        let j=0;
-        for(;j<nb;j++) {
-            const vb = this.vbSansAccent(cacheVerbe[j]);
-            if (vb.startsWith(verbe)) {
-                this.prop.push(cacheVerbe[j]);
-            }
-        }
+    getRandomLettreMinuscule() {
+        let lettre = "abcdefghijklmnopqrstuvwxyz";
+        let index = Math.floor(Math.random()*26);
+        return lettre[index];
+    }
+
+    getRandomLettreMajuscule() {
+        let lettre = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let index = Math.floor(Math.random()*26);
+        return lettre[index];
+    }
+
+    getRandomSpeciaux() {
+        let lettre = "-_!@#$%^&*+/§(){}[]<>?.";
+        let index = Math.floor(Math.random()*lettre.length);
+        return lettre[index];
     }    
 
-    getConjTypo(verbe) {
-        verbe = this.traiteVb(verbe);
-        if (verbe==="") return [];
-        //vérifie si le verbe est dans le cache
-        this.prop=[];
-        this.checkCache(this.taille10,verbe);
-        this.checkCache(this.taille9,verbe);
-        this.checkCache(this.taille8,verbe);
-        this.checkCache(this.taille7,verbe);
-        this.checkCache(this.taille6,verbe);
-        this.checkCache(this.taille5,verbe);
-        this.checkCache(this.taille4,verbe);
-        this.checkCache(this.taille3,verbe);
- 
-        if (this.prop.length > 0) {
-            this.prop=this.prop.slice(0, 9);
-           
-        } else {	
-           // clearTimeout(global_timeout_check);
-           // global_timeout_check = setTimeout("update_after_timeout('"+verbe+"','"+l+"','"+f+"');",400);
-        }
-
-        return this.prop;
+    
+    getRandomChiffre() {
+        return String(Math.floor(Math.random()*10));        
     }
-    update_after_timeout(vb,l,f){
-//        clearTimeout(global_timeout_check);
-//        submitForm(vb,l);
+
+    getRandomValue(nb) {
+        return Math.floor(Math.random()*nb);
+    }
+
+    generateMotDePasse() {
+        let mdp = "";
+        while(mdp.length<this.paramNbChar) {
+            let typeCharactere = this.getRandomValue(8);
+            switch(typeCharactere) {
+                case 0:
+                case 1:
+                    mdp+=(this.paramChiffre) ? this.getRandomChiffre() : "";
+                    break;
+                case 2:
+                case 3:
+                case 4:
+                    mdp+=(this.paramMinuscule) ? this.getRandomLettreMinuscule() : "";
+                    break;
+                case 5:
+                case 6:
+                    mdp+=(this.paramMajuscule) ? this.getRandomLettreMajuscule() : "";
+                    break;
+                case 7:                 
+                    mdp+=(this.paramSpeciaux) ? this.getRandomSpeciaux() : ""; 
+                    break;
+                default:
+                    ;
+            }
+            
+            
+            
+                       
+        }
+        return mdp;
     }
    
-    }    
 }
 
 export default GenMotDePasse;
