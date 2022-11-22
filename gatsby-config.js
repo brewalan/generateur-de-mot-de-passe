@@ -3,7 +3,8 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Generateur de mot de passe`,
+    title: `Générateur de mot de passe`,
+    description: 'Générateur de mot de passe sécurisé',
     siteUrl: `https://www.yourdomain.tld`
   },
   plugins: ["gatsby-plugin-image", "gatsby-plugin-sitemap", {
