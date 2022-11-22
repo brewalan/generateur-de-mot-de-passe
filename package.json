@@ -1,0 +1,28 @@
+{
+  "name": "generateur-de-mot-de-passe",
+  "version": "1.0.0",
+  "private": true,
+  "description": "generateur-de-mot-de-passe",
+  "author": "Brewalan Le Dru",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^5.0.0",
+    "gatsby-plugin-image": "^3.1.0",
+    "gatsby-plugin-manifest": "^5.1.0",
+    "gatsby-plugin-sharp": "^5.1.0",
+    "gatsby-plugin-sitemap": "^6.1.0",
+    "gatsby-source-filesystem": "^5.1.0",
+    "gatsby-transformer-sharp": "^5.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
