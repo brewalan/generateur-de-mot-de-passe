@@ -1,4 +1,5 @@
 //import ConjBank from "../features/ConjBank";
+import { appTexte } from "./appTexte";
 
 /* Generate some verbs when starting to key down */
 class GenMotDePasse {
@@ -40,6 +41,11 @@ class GenMotDePasse {
     }
 
     generateMotDePasse() {
+        /* vérifie les paramètres */
+        if ((!this.paramChiffre) && (!this.paramMajuscule) && (!this.paramMinuscule) && (!this.paramSpeciaux)) {
+            return appTexte.erreurParametre;
+        }
+        /* commence la génération du mot de passe */
         let mdp = "";
         while(mdp.length<this.paramNbChar) {
             let typeCharactere = this.getRandomValue(8);

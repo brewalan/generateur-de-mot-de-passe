@@ -2,6 +2,7 @@ import * as React from "react"
 import Layout from "../components/layout"
 import FooterPage from "../components/footer"
 import MotDePasse from "../components/motdepasse/motdepasse"
+import { appTexte } from "../utils/appTexte"
 
 const seo = {
   title: "Générateur de mot de passe",
@@ -19,7 +20,7 @@ const IndexPage = () => {
 
 
       <main>
-        <p>Hello</p>
+        <h2>{appTexte.creerMotDePasse}</h2>
         <MotDePasse />
       </main>
 
