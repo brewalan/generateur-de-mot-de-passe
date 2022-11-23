@@ -5,7 +5,7 @@ module.exports = {
   siteMetadata: {
     title: `Générateur de mot de passe`,
     description: 'Générateur de mot de passe sécurisé',
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: 'https://bldtech.online'
   },
   plugins: 
     ["gatsby-plugin-image", 
@@ -26,7 +26,7 @@ module.exports = {
         },
       __key: "images"
     },
-    {
+/**    {
       resolve: 'gatsby-plugin-matomo',
       options: {
         siteId: 'YOUR_SITE_ID',
@@ -34,6 +34,6 @@ module.exports = {
         siteUrl: 'https://YOUR_LIVE_SITE_URL.COM',
         disableCookies: true
       }
-    }  
+    }*/  
   ]
 };

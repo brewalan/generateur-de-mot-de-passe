@@ -1,10 +1,13 @@
 import React from 'react';
-//import './NuageVerbeReact.css'
-//import { conjText } from '../../features/ConjIcon';
 import GenMotDePasse from '../../utils/genMotDePasse';
-import { appTexte } from '../../utils/appTexte';
 import ParamMdp from './paramMdp';
+import ParamNb from './paramNb';
+import DisplayPassword from './displayPassword';
+import { appTexte } from '../../utils/appTexte';
  
+
+const MAX_CHAR = 250;
+const MAX_PASSWORD = 50;
 
 class MotDePasse extends React.Component {
 
@@ -19,8 +22,8 @@ class MotDePasse extends React.Component {
       paramMajuscule: this.mdp.paramMajuscule,
       paramSpeciaux: this.mdp.paramSpeciaux,
       paramExclusion: this.mdp.paramExclusion,
-      paramNbChar: this.paramNbChar,
-      paramNbMotDePasse: this.paramNbMotDePasse,
+      paramNbChar: this.mdp.paramNbChar,
+      paramNbMotDePasse: this.mdp.paramNbMotDePasse,
       motDePasse: this.mdp.generateMotDePasse()
     };    
     this.handleClick = this.handleClick.bind(this);
@@ -29,6 +32,8 @@ class MotDePasse extends React.Component {
     this.handleMajusculeChange = this.handleMajusculeChange.bind(this);
     this.handleSpeciauxChange = this.handleSpeciauxChange.bind(this);
     this.handleExclusionChange = this.handleExclusionChange.bind(this);
+    this.handleNbChange = this.handleNbChange.bind(this);
+    this.handleLengthChange = this.handleLengthChange.bind(this);
   }
 
   /* Changement dans la génération du mot de passe */
@@ -57,7 +62,16 @@ class MotDePasse extends React.Component {
     this.mdp.paramExclusion=check;
     this.setState({motDePasse: this.mdp.generateMotDePasse()});
   }
-
+  handleNbChange(nb) {
+    this.setState({paramNbMotDePasse: nb});
+    this.mdp.paramNbMdp=nb;
+    this.setState({motDePasse: this.mdp.generateMotDePasse()});
+  }
+  handleLengthChange(nb) {
+    this.setState({paramNbChar: nb});
+    this.mdp.paramNbChar=nb;
+    this.setState({motDePasse: this.mdp.generateMotDePasse()});
+  }
 
   /* click sur la génération de mot de passe */
   handleClick() {
@@ -109,12 +123,28 @@ class MotDePasse extends React.Component {
             checked={this.state.paramExclusion}
           />
 
+          <ParamNb
+            id="btnNbChar" 
+            onChange={this.handleLengthChange}
+            max={MAX_CHAR}
+            textValue={appTexte.btnNbChar}
+            selected={this.state.paramNbChar}
+          />
+          <ParamNb
+            id="btnNbMdp" 
+            onChange={this.handleNbChange}
+            max={MAX_PASSWORD}
+            textValue={appTexte.btnNbMotDePasse}
+            selected={this.state.paramNbMotDePasse}
+          />
 
           <button onClick={this.handleClick}>
             {appTexte.btnGenMotDePasse}
           </button>
-          <p>{appTexte.motDePasse}</p>
-          <p>{this.state.motDePasse}</p>
+
+          <DisplayPassword 
+            passwordValue={this.state.motDePasse} />
+
         </div>
       </React.Fragment>
     );

@@ -40,11 +40,7 @@ class GenMotDePasse {
         return Math.floor(Math.random()*nb);
     }
 
-    generateMotDePasse() {
-        /* vérifie les paramètres */
-        if ((!this.paramChiffre) && (!this.paramMajuscule) && (!this.paramMinuscule) && (!this.paramSpeciaux)) {
-            return appTexte.erreurParametre;
-        }
+    getPassword() {
         /* commence la génération du mot de passe */
         let mdp = "";
         while(mdp.length<this.paramNbChar) {
@@ -69,10 +65,30 @@ class GenMotDePasse {
                 default:
                     ;
             }
-            
-            
-            
                        
+        }
+        return mdp;
+
+    }
+
+
+    /* main function to generate a password */
+    generateMotDePasse() {
+        /* vérifie les paramètres */
+        if ((!this.paramChiffre) && (!this.paramMajuscule) && (!this.paramMinuscule) && (!this.paramSpeciaux)) {
+            return [appTexte.erreurParametre];
+        }
+        if (this.paramNbMdp<1) {
+            return [appTexte.erreurNombre];
+        }
+        if (this.paramNbMdp>50) {
+            return [appTexte.erreurNombre];
+        }
+
+        /* génère le nombre de mot de passe demandé */
+        let mdp = [];
+        for(let index=0;index<this.paramNbMdp;index++) {
+            mdp.push(this.getPassword());
         }
         return mdp;
     }

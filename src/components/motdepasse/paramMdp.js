@@ -15,7 +15,7 @@ class ParamMdp extends React.Component {
     this.props.onChange(check);
   }
 
-  /* display nuage tag */
+  /* display input checkbox */
   render() {
     return (
       <React.Fragment>

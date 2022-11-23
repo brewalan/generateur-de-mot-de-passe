@@ -5,8 +5,8 @@ import MotDePasse from "../components/motdepasse/motdepasse"
 import { appTexte } from "../utils/appTexte"
 
 const seo = {
-  title: "Générateur de mot de passe",
-  description: "Le générateur de mot de passe vous permet de créer un mot de passe fort et sécurisé."
+  title: "Générateur de mots de passe",
+  description: "Le générateur de mots de passe vous permet de créer un mot de passe fort et sécurisé."
 }
 
 
@@ -15,7 +15,7 @@ const IndexPage = () => {
     <React.Fragment>
 
       <Layout pageTitle={seo.title}>
-        <p>I'm making this by following the Gatsby Tutorial.</p>
+        <p>Créer votre mot de passe sécurisé avec des minuscules, des majuscules, des chiffres et des caractères spéciaux. Un mot de passe sécurisé est un moyen simple de protéger vos données.</p>
       </Layout>
 
 

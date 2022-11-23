@@ -7,10 +7,8 @@ import {
 const Layout = ({ pageTitle, children }) => {
   return (
     <div className={container}>
-      <main>
-        <h1 className={heading}>{pageTitle}</h1>
-        {children}
-      </main>
+      <h1 className={heading}>{pageTitle}</h1>
+      {children}
     </div>
   )
 }
