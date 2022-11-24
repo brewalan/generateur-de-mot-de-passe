@@ -24,6 +24,8 @@ const IndexPage = () => {
         <MotDePasse />
       </main>
 
+      <i class="fa-light fa-clone"></i>
+
       <FooterPage />
     </React.Fragment>
   )
@@ -35,5 +37,6 @@ export const Head = () => (
   <React.Fragment>  
     <title>{seo.title}</title>
     <meta name="description" content={seo.description} />  
+    <script src="https://kit.fontawesome.com/dd35bbd14e.js" crossorigin="anonymous"></script>
   </React.Fragment>  
 )
