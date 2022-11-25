@@ -1,7 +1,7 @@
 import * as React from 'react'
-import Layout from '../components/layout'
+import Layout from '../components/template/layout'
 import { StaticImage } from 'gatsby-plugin-image'
-import Header from '../components/header'
+import Header from '../components/template/header'
 
 
 const AboutPage = () => {

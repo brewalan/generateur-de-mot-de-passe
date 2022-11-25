@@ -1,5 +1,5 @@
 import React from 'react';
-import { switchBox,slider } from './paramMdp.module.scss'
+import { switchBox,slider,checkLbl } from './paramMdp.module.scss'
  
 
 class ParamMdp extends React.Component {
@@ -24,7 +24,8 @@ class ParamMdp extends React.Component {
 
 
 
-          <label className={switchBox} forhtml={this.props.id}>
+          <label className={switchBox} 
+            forhtml={this.props.id}>
             <input type="checkbox" 
               id={this.props.id} 
               name={this.props.id} 
@@ -32,7 +33,9 @@ class ParamMdp extends React.Component {
               onChange={this.handleChange} />  
             <span className={slider}></span>                      
           </label>
-          {this.props.textValue}
+          <span className={checkLbl}>
+            <p>{this.props.textValue}</p>
+          </span>
         </div>
       </React.Fragment>
     );

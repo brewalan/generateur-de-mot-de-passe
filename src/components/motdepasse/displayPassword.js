@@ -1,6 +1,7 @@
 import React from 'react';
 import { appTexte } from '../../utils/appTexte';
-import { generatedPassword,mdpTexte,divPassword } from './displayPassword.module.scss'
+import IconCopy from '../template/iconList';
+import { generatedPassword,mdpTexte,divPassword,btnCopy } from './displayPassword.module.scss'
  
 
 class DisplayPassword extends React.Component {
@@ -25,7 +26,12 @@ class DisplayPassword extends React.Component {
                         return (
                             <div key="generatedPassKey" className={divPassword} >
                                 {txt}
-                                <button key="genButtonKey" onClick={async () =>  await this.updateClipboard({txt})}>Copy</button>
+                                <button 
+                                  className={btnCopy}
+                                  key="genButtonKey" 
+                                  onClick={async () =>  await this.updateClipboard({txt})}>
+                                  <IconCopy />
+                                </button>
                             </div>
                         );
                 })}

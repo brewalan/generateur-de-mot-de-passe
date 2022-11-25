@@ -1,4 +1,5 @@
 import React from 'react';
+import { selectNb,selectLbl } from "./paramNb.module.scss";
  
 
 class ParamNb extends React.Component {
@@ -22,6 +23,7 @@ class ParamNb extends React.Component {
       <React.Fragment>
         <div>
             <select 
+                className={selectNb}
                 name={this.props.id} 
                 id={this.props.id}
                 value={this.props.selected}
@@ -30,7 +32,9 @@ class ParamNb extends React.Component {
                     return <option key={this.props.id+val} value={val}>{val}</option>
                 })}
             </select>
-          <label forhtml={this.props.id}>
+          <label 
+            className={selectLbl}
+            forhtml={this.props.id}>
             {this.props.textValue}
           </label>
         </div>

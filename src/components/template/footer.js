@@ -5,7 +5,7 @@ import { siteFooter,
 navLinkItem,
 navLinks,
 navLinkText
-} from './footer.module.css'
+} from './footer.module.scss'
 
 const FooterPage = () => {
 

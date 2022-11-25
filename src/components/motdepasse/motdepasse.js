@@ -4,6 +4,7 @@ import ParamMdp from './paramMdp';
 import ParamNb from './paramNb';
 import DisplayPassword from './displayPassword';
 import { appTexte } from '../../utils/appTexte';
+import { btnCreate,btnCreateDiv } from './motdepasse.module.scss';
  
 
 const MAX_CHAR = 250;
@@ -137,10 +138,14 @@ class MotDePasse extends React.Component {
             textValue={appTexte.btnNbMotDePasse}
             selected={this.state.paramNbMotDePasse}
           />
-
-          <button onClick={this.handleClick}>
-            {appTexte.btnGenMotDePasse}
-          </button>
+          
+          <div className={btnCreateDiv}>
+            <button 
+              className={btnCreate}
+              onClick={this.handleClick}>
+              {appTexte.btnGenMotDePasse}
+            </button>
+          </div>
 
           <DisplayPassword 
             passwordValue={this.state.motDePasse} />

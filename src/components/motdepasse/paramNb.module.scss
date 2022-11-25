@@ -1,0 +1,19 @@
+@import '../style/colors.scss';
+
+
+.selectNb {
+    background-color: $colorGray;
+    color:white;
+    border-radius: 34px;   
+    font-size: 1.0em; 
+    padding:2px;
+    margin:5px;
+    width: 60px;
+    border: none;
+    text-align:center;
+    height: 30px;
+}
+.selectLbl {
+    height: 30px;
+    font-weight: 500;
+}
