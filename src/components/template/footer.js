@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
-import { IconInfo, IconCookie, IconEmail, IconHome } from './iconList'
+import { IconInfo, IconCookie, IconEmail, IconHome, IconGavel } from './iconList'
 import { siteFooter,
 navLinkItem,
 navLinks,
@@ -32,6 +32,12 @@ const FooterPage = () => {
               <span className={navLinkLien}>Confidentialité</span>
             </Link>
           </li>
+          <li className={navLinkItem}>
+            <Link to="/" className={navLinkText}>
+              <IconGavel />
+              <span className={navLinkLien}>Mentions légales</span>              
+            </Link>
+          </li>          
           <li className={navLinkItem}>
             <Link to="/" className={navLinkText}>
               <IconEmail />
