@@ -2,14 +2,14 @@ import * as React from 'react'
 import {
   container,
   heading
-} from './layout.module.css'
+} from './layout.module.scss'
 
 const Layout = ({ pageTitle, children }) => {
   return (
-    <div className={container}>
+    <main className={container}>
       <h1 className={heading}>{pageTitle}</h1>
       {children}
-    </div>
+    </main>
   )
 }
 

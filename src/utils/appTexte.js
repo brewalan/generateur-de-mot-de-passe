@@ -10,5 +10,7 @@ export const appTexte = {
     motDePasse: "Mot de passe :",
     erreurParametre: "Attention: il faut au moins un caractère pour pouvoir créer un mot de passe",
     erreurNombre: "Le nombre de mot de passe doit être compris entre 1 et 50.",
-    creerMotDePasse: "Créer votre mot de passe"
+    creerMotDePasse: "Créer votre mot de passe",
+    generateurMotDePasse: "Générateur de mots de passe",
+    indexDescr: "Le générateur de mots de passe vous permet de créer un mot de passe fort et sécurisé.",
 }

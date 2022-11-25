@@ -26,6 +26,7 @@ module.exports = {
         },
       __key: "images"
     },
+    "gatsby-plugin-sass",    
 /**    {
       resolve: 'gatsby-plugin-matomo',
       options: {

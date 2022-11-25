@@ -1,5 +1,5 @@
 import React from 'react';
-import { switchBox,slider,round } from './paramMdp.module.css'
+import { switchBox,slider } from './paramMdp.module.scss'
  
 
 class ParamMdp extends React.Component {

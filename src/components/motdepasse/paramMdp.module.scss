@@ -1,3 +1,5 @@
+@import '../style/colors.scss';
+
 /* The switch - the box around the slider */
 .switchBox {
     position: relative;
@@ -42,11 +44,11 @@
   }
   
   input:checked + .slider {
-    background-color: #2196F3;
+    background-color: $colorGray;
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px $colorGray;
   }
   
   input:checked + .slider:before {

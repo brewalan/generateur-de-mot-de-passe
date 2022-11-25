@@ -1,6 +1,6 @@
 import React from 'react';
 import { appTexte } from '../../utils/appTexte';
-import { generatedPassword,mdpTexte } from './displayPassword.module.css'
+import { generatedPassword,mdpTexte,divPassword } from './displayPassword.module.scss'
  
 
 class DisplayPassword extends React.Component {
@@ -23,9 +23,9 @@ class DisplayPassword extends React.Component {
             <div className={mdpTexte}>
                 {this.props.passwordValue.map((txt) => {
                         return (
-                            <div key="kjkk1" >
+                            <div key="generatedPassKey" className={divPassword} >
                                 {txt}
-                                <button key="kjkjjk1" onClick={async () =>  await this.updateClipboard({txt})}>Copy {txt}</button>
+                                <button key="genButtonKey" onClick={async () =>  await this.updateClipboard({txt})}>Copy</button>
                             </div>
                         );
                 })}

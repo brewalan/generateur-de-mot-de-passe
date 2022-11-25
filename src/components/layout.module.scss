@@ -1,3 +1,5 @@
+@import './style/colors.scss';
+
 .container {
     margin: auto;
     max-width: 500px;
@@ -5,5 +7,5 @@
   }
   
   .heading {
-    color: rebeccapurple;
+    color: $colorDark
   }
