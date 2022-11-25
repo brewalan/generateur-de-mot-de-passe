@@ -13,19 +13,32 @@ const seo = {
 }
 
 const textJustify = {
-  textAlign: "justify",
-  minWidth: "500px"
+  textAlign: "justify"
 }
+
+const remarque = {
+  textAlign: "justify",
+  marginTop: "5px",
+  marginBottom: "5px"
+}
+
 
 const IndexPage = () => {
   return (
     <React.Fragment>
 
       <Layout pageTitle={seo.pageH1}>
-        <div style={textJustify}>Créer votre mot de passe sécurisé avec des minuscules, des majuscules, des chiffres et des caractères spéciaux.<br />
-        Un mot de passe sécurisé est un moyen simple pour protéger vos données.</div>
+        <div style={textJustify}>Un mot de passe sécurisé est un moyen simple et efficace pour protéger vos données.</div>
 
         <MotDePasse />
+
+        <div style={remarque}><b>Remarques importantes</b>
+          <ul>
+            <li>Aucun mot de passe n'est stocké sur le server</li>
+            <li>La génération des mots de passe se fait toujours en local</li>
+            <li>Aucun cookie ou dispositif de traçage n'est utilisé par le site</li>
+          </ul>
+        </div>
 
       </Layout>
 
