@@ -18,7 +18,8 @@ class ParamNb extends React.Component {
 
   /* display select number */
   render() {
-    let arrValues = Array.from({length: this.props.max}, (_, i) => i + 1);
+    let max = this.props.max - this.props.min + 1;
+    let arrValues = Array.from({length: max}, (_, i) => i + this.props.min);
     return (
       <React.Fragment>
         <div>

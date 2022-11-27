@@ -23,13 +23,14 @@
     padding-right: 2rem;
     min-width: 200px;
     vertical-align: middle;
+    min-height: 48px;
+
   }
   .navLinkText {
     color: $colorWhite;
     cursor: pointer;
     text-decoration: none;
     font-size: 1.2rem;
-
   } 
   .navLinkText:hover {
     color: $colorWhiteHover;
@@ -42,3 +43,6 @@
     padding-left: 7px;
     display: table-cell;
   }   
+  .footerText {
+    color: $colorWhite;    
+  }

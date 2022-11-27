@@ -14,26 +14,27 @@ class GenMotDePasse {
 
 
     getRandomLettreMinuscule() {
-        let lettre = "abcdefghijklmnopqrstuvwxyz";
-        let index = Math.floor(Math.random()*26);
+        let lettre = (this.paramExclusion) ? "abcdefghijkmnopqrstuvwxyz" : "abcdefghijklmnopqrstuvwxyz";
+        let index = Math.floor(Math.random()*lettre.length);
         return lettre[index];
     }
 
     getRandomLettreMajuscule() {
-        let lettre = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        let index = Math.floor(Math.random()*26);
+        let lettre = (this.paramExclusion) ? "ABCDEFGHIJKLMNPQRSTUVWXYZ" : "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let index = Math.floor(Math.random()*lettre.length);
         return lettre[index];
     }
 
     getRandomSpeciaux() {
-        let lettre = "-_!@#$%^&*+/§(){}[]<>?.";
+        let lettre = (this.paramExclusion) ? "-*+%/(){}[]" : "-_!@#$%^&*+/§(){}[]<>?.";
         let index = Math.floor(Math.random()*lettre.length);
         return lettre[index];
     }    
-
     
     getRandomChiffre() {
-        return String(Math.floor(Math.random()*10));        
+        let lettre = (this.paramExclusion) ? "0123456789" : "23456789";
+        let index = Math.floor(Math.random()*lettre.length);
+        return lettre[index];
     }
 
     getRandomValue(nb) {
@@ -41,32 +42,59 @@ class GenMotDePasse {
     }
 
     getPassword() {
-        /* commence la génération du mot de passe */
+
+        /* do until password quality is ok */
         let mdp = "";
-        while(mdp.length<this.paramNbChar) {
-            let typeCharactere = this.getRandomValue(8);
-            switch(typeCharactere) {
-                case 0:
-                case 1:
-                    mdp+=(this.paramChiffre) ? this.getRandomChiffre() : "";
-                    break;
-                case 2:
-                case 3:
-                case 4:
-                    mdp+=(this.paramMinuscule) ? this.getRandomLettreMinuscule() : "";
-                    break;
-                case 5:
-                case 6:
-                    mdp+=(this.paramMajuscule) ? this.getRandomLettreMajuscule() : "";
-                    break;
-                case 7:                 
-                    mdp+=(this.paramSpeciaux) ? this.getRandomSpeciaux() : ""; 
-                    break;
-                default:
-                    ;
+        let passwordCheck = false;
+        while(!passwordCheck) {
+            /* commence la génération du mot de passe */
+            let nbChiffre = 0;
+            let nbMajuscule = 0;
+            let nbMinuscule = 0;
+            let nbSpeciaux = 0;
+            mdp = "";
+            while(mdp.length<this.paramNbChar) {
+                let typeCharactere = this.getRandomValue(8);
+                switch(typeCharactere) {
+                    case 0:
+                    case 1:
+                        mdp+=(this.paramChiffre) ? this.getRandomChiffre() : "";
+                        nbChiffre++;
+                        break;
+                    case 2:
+                    case 3:
+                    case 4:
+                        mdp+=(this.paramMinuscule) ? this.getRandomLettreMinuscule() : "";
+                        nbMinuscule++;
+                        break;
+                    case 5:
+                    case 6:
+                        mdp+=(this.paramMajuscule) ? this.getRandomLettreMajuscule() : "";
+                        nbMajuscule++;
+                        break;
+                    case 7:                 
+                        mdp+=(this.paramSpeciaux) ? this.getRandomSpeciaux() : ""; 
+                        nbSpeciaux++;
+                        break;
+                    default:
+                        ;
+                }
+                /* check quality */
+                let paramRequest = 0;
+                paramRequest += (this.paramChiffre) ? 1 : 0; 
+                paramRequest += (this.paramMinuscule) ? 1 : 0; 
+                paramRequest += (this.paramMajuscule) ? 1 : 0; 
+                paramRequest += (this.paramSpeciaux) ? 1 : 0; 
+                let paramUsed = 0;
+                paramUsed += (nbChiffre>0) ? 1 : 0;
+                paramUsed += (nbMinuscule>0) ? 1 : 0;
+                paramUsed += (nbMajuscule>0) ? 1 : 0;
+                paramUsed += (nbSpeciaux>0) ? 1 : 0;
+                passwordCheck = (paramRequest===paramUsed);
             }
                        
         }
+
         return mdp;
 
     }

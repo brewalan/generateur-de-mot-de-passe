@@ -12,10 +12,6 @@ const seo = {
   description: appTexte.indexDescr
 }
 
-const textJustify = {
-  textAlign: "justify"
-}
-
 const remarque = {
   textAlign: "justify",
   marginTop: "5px",
@@ -28,12 +24,12 @@ const IndexPage = () => {
     <React.Fragment>
 
       <Layout pageTitle={seo.pageH1}>
-        <div style={textJustify}>Un mot de passe sécurisé est un moyen simple et efficace pour protéger vos données.</div>
 
         <MotDePasse />
 
         <div style={remarque}><b>Remarques importantes</b>
           <ul>
+            <li>Un mot de passe sécurisé est un moyen simple et efficace de protéger vos données.</li>
             <li>Aucun mot de passe n'est stocké sur le server</li>
             <li>La génération des mots de passe se fait toujours en local</li>
             <li>Aucun cookie ou dispositif de traçage n'est utilisé par le site</li>

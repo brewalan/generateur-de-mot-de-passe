@@ -6,8 +6,9 @@ import DisplayPassword from './displayPassword';
 import { appTexte } from '../../utils/appTexte';
 import { btnCreate,btnCreateDiv } from './motdepasse.module.scss';
  
-
+const MIN_CHAR = 4;
 const MAX_CHAR = 250;
+const MIN_PASSWORD = 1;
 const MAX_PASSWORD = 50;
 
 class MotDePasse extends React.Component {
@@ -87,7 +88,6 @@ class MotDePasse extends React.Component {
   render() {   
     return (
       <React.Fragment>
-        <div className="text-center pb-2">
 
           <ParamMdp 
             id="btnChiffre" 
@@ -127,6 +127,7 @@ class MotDePasse extends React.Component {
           <ParamNb
             id="btnNbChar" 
             onChange={this.handleLengthChange}
+            min={MIN_CHAR}
             max={MAX_CHAR}
             textValue={appTexte.btnNbChar}
             selected={this.state.paramNbChar}
@@ -134,6 +135,7 @@ class MotDePasse extends React.Component {
           <ParamNb
             id="btnNbMdp" 
             onChange={this.handleNbChange}
+            min={MIN_PASSWORD}
             max={MAX_PASSWORD}
             textValue={appTexte.btnNbMotDePasse}
             selected={this.state.paramNbMotDePasse}
@@ -150,7 +152,6 @@ class MotDePasse extends React.Component {
           <DisplayPassword 
             passwordValue={this.state.motDePasse} />
 
-        </div>
       </React.Fragment>
     );
   }

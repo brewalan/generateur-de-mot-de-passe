@@ -6,6 +6,7 @@ import iconCookieSvg from "../../images/cookie-light.svg"
 import iconEmailSvg from "../../images/envelope-light.svg"
 import iconGavelSvg from "../../images/gavel-light.svg"
 import iconHomeSvg from "../../images/house-light.svg"
+import iconKeySvg from "../../images/key-solid.svg"
 
 /* list all available icons */
 export const IconCopy = () => <img alt="Copier" src={iconCopySvg} width="24px" height="24px" />
@@ -15,6 +16,7 @@ export const IconCookie = () => <img alt="Cookie" src={iconCookieSvg} width="24p
 export const IconEmail = () => <img alt="Email" src={iconEmailSvg} width="24px" height="24px" />
 export const IconGavel = () => <img alt="Légal" src={iconGavelSvg} width="24px" height="24px" />
 export const IconHome = () => <img alt="Accueil" src={iconHomeSvg} width="27px" height="24px" />
+export const IconKey = () => <img alt="Clef" src={iconKeySvg} width="32px" height="32px" />
 
 
 export default IconCopy

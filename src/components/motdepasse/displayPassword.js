@@ -3,6 +3,9 @@ import { appTexte } from '../../utils/appTexte';
 import IconCopy from '../template/iconList';
 import { generatedPassword,mdpTexte,divPassword,btnCopy } from './displayPassword.module.scss'
  
+const textCenter = {
+  textAlign: "center"
+}
 
 class DisplayPassword extends React.Component {
 
@@ -19,7 +22,7 @@ class DisplayPassword extends React.Component {
   render() {   
     return (
       <React.Fragment>
-        <h2>{appTexte.motDePasse}</h2>
+        <h2 style={textCenter}>{appTexte.motDePasse}</h2>
         <div className={generatedPassword}>
             <div className={mdpTexte}>
                 {this.props.passwordValue.map((txt) => {

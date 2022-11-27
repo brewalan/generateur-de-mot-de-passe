@@ -1,11 +1,12 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
-import { IconInfo, IconCookie, IconEmail, IconHome, IconGavel } from './iconList'
+import { IconInfo, IconCookie, IconEmail, IconHome, IconGavel, IconKey } from './iconList'
 import { siteFooter,
 navLinkItem,
 navLinks,
 navLinkText,
-navLinkLien
+navLinkLien,
+footerText
 } from './footer.module.scss'
 
 const FooterPage = () => {
@@ -47,6 +48,12 @@ const FooterPage = () => {
 
         </ul>
       </nav>
+      <div className={footerText}>
+        <IconKey />        
+        <p>
+          Le générateur de mots de passe - &copy; 2022  
+        </p>
+      </div>
     </footer>
   )
 }
