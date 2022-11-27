@@ -50,5 +50,5 @@ const IndexPage = () => {
 export default IndexPage
 
 export const Head = () => (
-  <Seo title={seo.title} descr ={seo.descr} />
+  <Seo title={seo.title} description={seo.description} />
 )

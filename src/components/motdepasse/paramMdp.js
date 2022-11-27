@@ -25,7 +25,7 @@ class ParamMdp extends React.Component {
 
 
           <label className={switchBox} 
-            forhtml={this.props.id}>
+            htmlFor={this.props.id}>
             <input type="checkbox" 
               id={this.props.id} 
               name={this.props.id} 
