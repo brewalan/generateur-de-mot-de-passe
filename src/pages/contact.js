@@ -56,7 +56,7 @@ const pointer = {
                 <li className={navLinkItem}>
                     <Link to="https://github.com/brewalan/" className={navLinkText}>
                     <IconGitHub />
-                    <span className={navLinkLien}>Github</span>                            
+                    <span className={navLinkLien}>GitHub</span>                            
                     </Link>
                 </li>
                 <li className={navLinkItem}>
