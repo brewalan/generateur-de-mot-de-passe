@@ -56,8 +56,6 @@ const FooterPage = () => {
         </p>
       </div>
     </footer>
-    {/* Matomo */}
-    <img referrerpolicy="no-referrer-when-downgrade" src="https://analytics.theconjugator.com/matomo.php?idsite=7&amp;rec=1" style="border:0" alt=""/>
     </React.Fragment>
   )
 }

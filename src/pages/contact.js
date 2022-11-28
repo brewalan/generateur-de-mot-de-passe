@@ -23,7 +23,7 @@ const pointer = {
     cursor: "pointer"
 }  
 
-  const PrivacyPage = () => {
+  const ContactPage = () => {
   return (
     <React.Fragment>
         <Layout pageTitle="Contact">
@@ -117,4 +117,4 @@ export const Head = () => (
 )
 
 
-export default PrivacyPage
+export default ContactPage

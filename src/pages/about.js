@@ -8,7 +8,7 @@ const intro = {
   color: "#663399"
 }
 
-  const PrivacyPage = () => {
+  const AboutPage = () => {
   return (
     <React.Fragment>
         <Layout pageTitle="À propos du site">
@@ -46,4 +46,4 @@ export const Head = () => (
 )
 
 
-export default PrivacyPage
+export default AboutPage

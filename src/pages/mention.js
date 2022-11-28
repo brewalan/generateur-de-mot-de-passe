@@ -4,7 +4,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import FooterPage from '../components/template/footer'
 import Seo from '../components/template/seo'
 
-  const PrivacyPage = () => {
+  const MentionPage = () => {
   return (
     <React.Fragment>
         <Layout pageTitle="Mentions légales">
@@ -33,4 +33,4 @@ export const Head = () => (
 )
 
 
-export default PrivacyPage
+export default MentionPage

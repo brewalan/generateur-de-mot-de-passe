@@ -5,7 +5,7 @@ module.exports = {
   siteMetadata: {
     title: `Générateur de mot de passe`,
     description: 'Générateur de mot de passe sécurisé',
-    siteUrl: 'https://bldtech.online'
+    siteUrl: 'https://motdepasse.online'
   },
   plugins: 
     ["gatsby-plugin-image", 
@@ -20,14 +20,14 @@ module.exports = {
     "gatsby-transformer-sharp", 
 
     "gatsby-plugin-sass",    
-/**    {
+    {
       resolve: 'gatsby-plugin-matomo',
       options: {
-        siteId: 'YOUR_SITE_ID',
+        siteId: '7',
         matomoUrl: 'https://analytics.theconjugator.com',
-        siteUrl: 'https://YOUR_LIVE_SITE_URL.COM',
+        siteUrl: 'https://motdepasse.online',
         disableCookies: true
       }
-    }*/  
+    }  
   ]
 };
