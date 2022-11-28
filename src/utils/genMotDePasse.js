@@ -14,7 +14,7 @@ class GenMotDePasse {
 
 
     getRandomLettreMinuscule() {
-        let lettre = (this.paramExclusion) ? "abcdefghijkmnopqrstuvwxyz" : "abcdefghijklmnopqrstuvwxyz";
+        let lettre = (this.paramExclusion) ? "abcdefghijkmnpqrstuvwxyz" : "abcdefghijklmnopqrstuvwxyz";
         let index = Math.floor(Math.random()*lettre.length);
         return lettre[index];
     }
@@ -32,7 +32,7 @@ class GenMotDePasse {
     }    
     
     getRandomChiffre() {
-        let lettre = (this.paramExclusion) ? "0123456789" : "23456789";
+        let lettre = (this.paramExclusion) ? "23456789" : "0123456789";
         let index = Math.floor(Math.random()*lettre.length);
         return lettre[index];
     }
