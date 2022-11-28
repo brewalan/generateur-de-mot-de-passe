@@ -24,7 +24,7 @@ import Seo from '../components/template/seo'
             <p>Lors de vos visites, aucune donnée n'est collectée. Généralement, les cookies sont utilisés pour le suivi de la fréquentation des sites. Ce n'est pas le cas ici, ce site ne trace pas ses utilisateurs. Le suivi est fait de manière anonyme par Matomo sur https://analytics.theconjugator.com. Ceci permet de voir l'audience de ce site.</p>
 
             <h2 className={intro}>Utilisation des données</h2>
-            <p>Les données que vous nous transmettez directement sont utilisées dans le but de vous re-contacter et/ou dans le cadre de la demande que vous nous faites. Ces données sont utilisées par Le Conjugeuur SRL, responsable du traitement des données, et ne seront jamais cédées à un tiers ni utilisées à d’autres fins que celles détaillées ci-dessus.</p>
+            <p>Les données que vous nous transmettez directement sont utilisées dans le but de vous re-contacter et/ou dans le cadre de la demande que vous nous faites. Ces données sont utilisées par Le Conjugueur SRL, responsable du traitement des données, et ne seront jamais cédées à un tiers ni utilisées à d’autres fins que celles détaillées ci-dessus.</p>
 
             <h2 className={intro}>Base légale</h2>
             <p>Les données personnelles ne sont collectées qu’après consentement obligatoire de l’utilisateur. Ce consentement est valablement recueilli (boutons et cases à cocher), libre, clair et sans équivoque. Dans le cas présent, il n'y a pas de consentement à demander car aucune donnée n'est collectée.</p>
