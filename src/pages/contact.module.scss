@@ -1,0 +1,29 @@
+@import '../components/style/colors.scss';
+
+  .navLinks {
+    list-style-type: none;
+  }
+  .navLinkItem {
+    padding-right: 2rem;
+    min-width: 200px;
+    vertical-align: middle;
+    min-height: 48px;
+
+  }
+  .navLinkText {
+    cursor: pointer;
+    color: blue;
+    text-decoration: none;
+    font-size: 1.2rem;
+  } 
+  .navLinkText:hover {
+    color: $colorDark;
+    font-size: 1.5rem;
+    font-weight: 700;        
+  }  
+  .navLinkLien {
+    min-height:24px;
+    vertical-align: middle;
+    padding-left: 7px;
+    display: table-cell;
+  }      

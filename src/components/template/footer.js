@@ -34,13 +34,13 @@ const FooterPage = () => {
             </Link>
           </li>
           <li className={navLinkItem}>
-            <Link to="/" className={navLinkText}>
+            <Link to="/mention" className={navLinkText}>
               <IconGavel />
               <span className={navLinkLien}>Mentions légales</span>              
             </Link>
           </li>          
           <li className={navLinkItem}>
-            <Link to="/" className={navLinkText}>
+            <Link to="/contact" className={navLinkText}>
               <IconEmail />
               <span className={navLinkLien}>Contact</span>              
             </Link>
