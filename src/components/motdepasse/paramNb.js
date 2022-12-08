@@ -35,6 +35,7 @@ class ParamNb extends React.Component {
             </select>
           <label 
             className={selectLbl}
+            for={this.props.id}
             htmlFor={this.props.id}>
             {this.props.textValue}
           </label>
